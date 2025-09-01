@@ -1,0 +1,212 @@
+<%- include('./base/header.ejs') %>
+<!-- <div class="container">
+  <div class="alert text-center bg-primary my-3" style="color: white">
+    <h4>SignUp Form</h4>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col"></div>
+      <div class="col">
+        <form action="/add/user" method="post">
+          <div class="">
+            <label for="username">first name</label>
+            <input type="text" placeholder="Enter your first name" class="form-control" name="firstname"/>
+          </div>
+           <div class="">
+            <label for="username">last name</label>
+            <input type="text" placeholder="Enter your last name" class="form-control" name="lastname"/>
+          </div>
+           <div class="">
+            <label for="username">email</label>
+            <input type="text" placeholder="Enter your email" class="form-control" name="email"/>
+          </div>
+          <div class="">
+            <label class="form-label">password</label>
+            <input type="password" placeholder="Enter your password" class="form-control" name="password"/>
+          </div>
+           <div class="">
+            <!-- <label class="form-label"> confirm password</label>
+            <input type="password" placeholder="Enter your confirm password" class="form-control" name="confirmpassword"/>
+          </div> -->
+          <!-- <div>
+            <button type="submit" value="Login" class="btn btn-warning w-100 my-3">SignIn</button>
+          </div> -->
+          <!-- <div>
+            <a href="#" class="btn btn-danger w-100 my-3">LogIn</a>
+          </div> -->
+          
+        <!-- <-- </div>
+         <div ><p>Already have an account? <a href="/">Login here</a></p> </div>
+        </form>
+        
+
+      </div>
+      <div class="col"></div>
+      </div>
+</div> --> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SignUp Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      width: 100vw;
+      background: url(../image/rd2.jpg) no-repeat center center;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      width: 95%;
+      max-width: 1100px;
+      background-color: rgba(255, 255, 255, 0.9);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 12px;
+      box-shadow: 0 6px 30px rgba(0, 0, 0, 0.3);
+      overflow: hidden;
+      margin: auto;
+    }
+
+    .left, .right {
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .left {
+      width: 55%;
+    }
+
+    .right {
+      width: 45%;
+      /* background-color: rgba(0, 0, 0, 0.5); */
+      /* box-shadow: inset -5px -5px rgba(0, 0, 0, 0.5); */
+      border-radius: 75%;
+    }
+
+    .left h2 {
+      margin-bottom: 25px;
+      color: #333;
+      font-size: 55px;
+    }
+
+    label {
+      font-weight: bold;
+      margin-top: 10px;
+      display: block;
+      color: #555;
+      font-size: 35px;
+      align-self: flex-start;
+    }
+
+    input {
+      width: 100%;
+      padding: 14px;
+      margin: 8px 0 20px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 25px;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      background: #6200ff;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 30px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #4500cc;
+    }
+
+    .login-link {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 30px;
+    }
+
+    .login-link a {
+      color: #6200ff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .right img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .left, .right {
+        width: 100%;
+      }
+
+      .left {
+        padding: 30px;
+      }
+
+      .right {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="left">
+      <h2>Sign Up</h2>
+      <form action="/add/user" method="post">
+        <label for="firstname">First Name</label>
+        <input type="text" id="firstname" name="firstname" placeholder="Enter your first name" required />
+
+        <label for="lastname">Last Name</label>
+        <input type="text" id="lastname" name="lastname" placeholder="Enter your last name" required />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required />
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required />
+
+        <button type="submit">Sign Up</button>
+
+        <div class="login-link">
+          <p>Already have an account? <a href="/">Login here</a></p>
+        </div>
+      </form>
+    </div>
+    <div class="right">
+      <img src="/image/rd.jpg" alt="SignUp Illustration" />
+    </div>
+  </div>
+</body>
+</html>
+<%- include('./base/footer.ejs') %>
+
+   

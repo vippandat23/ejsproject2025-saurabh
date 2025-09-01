@@ -1,0 +1,190 @@
+    <%- include('./base/header.ejs') %>
+<!-- <div class="container">
+  <div class="alert text-center bg-primary my-3" style="color: white">
+    <h4>Login Form</h4>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col"></div>
+      <div class="col">
+        <form action="/login" method="post">
+          <div class="">
+            <label for="username">Email</label>
+            <input type="text" placeholder="Enter your email" class="form-control" name="email"/>
+          </div>
+          <div class="">
+            <label class="form-label">Password</label>
+            <input type="password" placeholder="Enter your password" class="form-control" name="password"/>
+          </div>
+          <div>
+            <a href="">Forgot password</a>
+          </div>
+          <div>
+            <button type="submit" value="Login" class="btn btn-warning w-100 my-3">LogIn</button>
+          </div>
+          <div><p> new user ||  <a href="/user/signup">SignUp</a></p></div>
+        </form>
+      </div>
+      <div class="col"></div>
+    </div>
+  </div>
+</div> -->
+<%- include('./base/header.ejs') %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      width: 100vw;
+      background: url(../image/rd2.jpg) no-repeat center center;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      width: 95%;
+      max-width: 2000px;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 12px;
+      box-shadow: 0 6px 30px rgba(0, 0, 0, 0.5);
+      overflow: hidden;
+    }
+
+    .left, .right {
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .left {
+      width: 55%;
+      background-color: rgba(0, 0, 0, 0.6);
+      border-radius: 12px;
+    }
+
+    .right {
+      width: 55%;
+      background-color: rgba(11, 11, 11, 0.5);
+      border-radius: 12px;
+    }
+
+    .left h2 {
+      color: #fff;
+      font-size: 55px;
+      margin-bottom: 30px;
+    }
+
+    label {
+      font-weight: bold;
+      margin-top: 10px;
+      color: #f20707;
+      align-self: flex-start;
+      font-size: 35px;
+    }
+
+    input {
+      width: 100%;
+      padding: 14px;
+      margin: 8px 0 20px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 35px;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      background: #6200ff;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 30px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #4500cc;
+    }
+
+    .signup-link {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 25px;
+       background: #f6f5f8;
+    }
+
+    .signup-link a {
+      color: #ff0000;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .right img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .left, .right {
+        width: 100%;
+      }
+
+      .left {
+        padding: 100px;
+      }
+
+      .right {
+        padding: 100px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="left">
+      <h2>Login</h2>
+      <form action="/login" method="post">
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" placeholder="Enter your email" required />
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required />
+
+        <button type="submit">Login</button>
+
+        <div class="signup-link">
+          <p>New user? <a href="/user/signup">Sign Up</a></p>
+        </div>
+      </form>
+    </div>
+    <div class="right">
+      <img src="../image/rd.jpg" alt="Login Illustration" />
+    </div>
+  </div>
+</body>
+</html>
+<%- include('./base/footer.ejs') %>

@@ -1,0 +1,70 @@
+<%- include('./base/header.ejs') %> <%- include('./base/nave.ejs') %>
+<div class="container">
+  <div class="alert text-center bg-primary my-3 w-30" style="color: white">
+    <h4>Add Student</h4>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col"></div>
+      <div class="col">
+        <form action="/add/student" method="post" enctype="multipart/form-data">
+          <div class="">
+            <label class="form-label">RollNo</label>
+            <input type="text" placeholder="Enter your rollNo" class="form-control" name="rollNo"/>
+          </div>
+          <div class="">
+            <label class="form-label">Student Name</label>
+            <input type="text" placeholder="Enter your student name" class="form-control" name="studentName"/>
+          </div>
+          <div class="">
+            <label class="form-label">Father Name</label>
+            <input type="text" placeholder="Enter your fatherName" class="form-control" name="fatherName"/>
+          </div>
+          <div>
+            <label class="form-label">Course</label>
+            <input type="text" placeholder="Select your course" class="form-control" name="course">
+            <!-- <select class="form-control" name="course">
+              <option value="">--Choose course--</option>
+              <option value="">B-TECH</option>
+              <option value="">M-TECH</option>
+              <option value="">Bca</option>
+              <option value="">MCA</option>
+              <option value="">BCOM</option>
+              <option value="">BBA</option>
+              <option value="">MBA</option>
+              <option value="">OTHER</option>
+            </select> -->
+          </div>
+          <div>
+            <label class="form-label">Branch</label>
+            <input type="text" placeholder="Enter your Branch" class="form-control" name="branch"/>
+            <!-- <select class="form-control" name="branch">
+              <option value="">--Choose branch--</option>
+              <option value="">CSE</option>
+              <option value="">AI-ML</option>
+              <option value="">DATA SCIENCE</option>
+              <option value="">IOT</option>
+              <option value="">MECHINICAL</option>
+              <option value="">CIVIL</option>
+              <option value="">ELECTRICAL</option>
+              <option value="">OTHER</option>
+            </select> -->
+          </div>
+          <div>
+            <label class="form-label">yearOfAddmission</label>
+            <input type="text" placeholder="Enter your yearOfAddmission" class="form-control" name="yearOfAddmission"/>
+          </div>
+          <div>
+            <label class="form-label">Select Student Image</label>
+            <input type="file" placeholder="Enter your image" class="form-control" name="studentImage"/>
+          </div>
+          <div>
+            <button type="submit" value="Login" class="btn btn-warning w-100 my-3">Add Student</button>
+          </div>
+        </form>
+      </div>
+      <div class="col"></div>
+    </div>
+  </div>
+</div>
+<%- include('./base/footer.ejs') %>
